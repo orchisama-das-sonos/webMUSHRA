@@ -153,7 +153,7 @@ array_push($pcCsvData, $input);
 
 
 foreach ($session->trials as $trial) {
-  if ($trial->type == "paired_comparison2") {
+  if ($trial->type == "paired_comparison_no_ref") {
 	  foreach ($trial->responses as $response) {
 	  	$write_pc = true;
 
@@ -173,7 +173,7 @@ foreach ($session->trials as $trial) {
 }
 
 if ($write_pc) {
-	$filename = $filepathPrefix."paired_comparison2".$filepathPostfix;
+	$filename = $filepathPrefix."paired_comparison_no_ref".$filepathPostfix;
 	$isFile = is_file($filename);
 	$fp = fopen($filename, 'a');
 	foreach ($pcCsvData as $row) {

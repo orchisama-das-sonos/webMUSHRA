@@ -91,8 +91,8 @@ function addPagesToPageManager(_pageManager, _pages) {
         var pcPageManager = new PairedComparisonPageManager();
         pcPageManager.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
         pcPageManager = null;
-      } else if (pageConfig.type == "paired_comparison2") {
-        var pcPageManager = new PairedComparisonPage2Manager();
+      } else if (pageConfig.type == "paired_comparison_no_ref") {
+        var pcPageManager = new PairedComparisonNoReferencePageManager();
         pcPageManager.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
         pcPageManager = null;
       } else if (pageConfig.type == "bs1116") {
